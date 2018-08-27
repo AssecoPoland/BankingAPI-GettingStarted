@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
-title: Asseco Retail Banking API
+title: Retail Banking API
 description: Introduction
 logo: logo.png
+show_downloads: false
