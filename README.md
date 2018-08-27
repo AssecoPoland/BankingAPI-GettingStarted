@@ -1,8 +1,8 @@
-## Welcome to GitHub Pages
+## Welcome to the Retail Banking API of Asseco
 
-You can use the [editor on GitHub](https://github.com/bukalaACP/hackathon-2018/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Our API allow easy and secure access to bank accounts, customer data, many payment methods, and much more. Many functions are publicly available.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Our APIs are RESTful. We use JSON format and OAuth authorization based on JWT.
 
 ### Markdown
 
