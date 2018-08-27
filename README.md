@@ -1,37 +1,29 @@
-## Welcome to the Retail Banking API of Asseco
+## Welcome to the Retail Banking API
 
 Our API allow easy and secure access to bank accounts, customer data, many payment methods, and much more. Many functions are publicly available.
 
 Our APIs are RESTful. We use JSON format and OAuth authorization based on JWT.
 
-### Markdown
+### Getting Started
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+### Bussiness domain
 
-# Header 1
-## Header 2
-### Header 3
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-- Bulleted
-- List
+### Transaction flow
 
-1. Numbered
-2. List
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-**Bold** and _Italic_ and `Code` text
+### Check balance flow
 
-[Link](url) and ![Image](src)
-```
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
+### Tools
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bukalaACP/hackathon-2018/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with API? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
