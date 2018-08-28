@@ -1,4 +1,4 @@
-## Welcome to the Retail Banking API
+## Welcome to the Banking API
 
 Our API allows easy and secure access to bank accounts, customer data, many payment methods, and much more.
 
