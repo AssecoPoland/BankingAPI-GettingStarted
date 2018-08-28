@@ -10,7 +10,42 @@ The purpose of this documentation is to give an overview of all the API which ar
 
 ### Getting Started
 
+To start working with our API You need information about:
+- jwtToken - authorization token which is provided by our organization
+- apiAddress - address of Your sanbox
+- customerId - internal customer's identificator inside of bank
 
+Below is a simple curl GET request to our API:
+
+``` 
+curl -k -X GET --header "Accept: application/json" --header "Authorization: Bearer jwtToken" "https://apiAddress/retail-banking-api/api/user/get/user_personal_details.json?customerId=customerId"
+```
+
+### Security issue
+
+Production security flow based on OAuth2 flow and it's describe below:
+
+     ----------------------Production--------------------------
+     +--------+                               +---------------+
+     |        |--(A)- Authorization Request ->|   Resource    |
+     |        |                               |     Owner     |
+     |        |<-(B)-- Authorization Grant ---|               |
+     |        |                               +---------------+
+     |        |
+     |        |                               +---------------+
+     |        |--(C)-- Authorization Grant -->| Authorization |
+     | Client |                               |     Server    |
+     |        |<-(D)----- Access Token -------|               |
+     |        |                               +---------------+
+     |        |
+     ------------------------Sandbox---------------------------
+     |        |                               +---------------+
+     |        |--(E)----- Access Token ------>|    Resource   |
+     |        |                               |     Server    |
+     |        |<-(F)--- Protected Resource ---|               |
+     +--------+                               +---------------+
+
+In sandbox we provide You ready to use JWT token witch will not expire.
 
 ### Bussiness domain
 
@@ -24,24 +59,24 @@ This resource describe a basic banking product. It's finance registry closely re
 This resource is created after the bank's customer decided to make some finance movement eg. money transfer to internal or external account. Every payment has their amount, currency and status which decide about payment's state. Not every payments has a finance effect cause rejection, limitations or user cancellation.
 
 #### /transaction
-information about transactions on user account
+This resource is created after the bank's customers do some payments and this payments was booked in Core Banking System.
+Transaction is connected with payments from which it was created.
 
 #### /credit
-user credit list
+This resource reflects customer's financial liabilities towards the bank.
 
 #### /deposit
-user deposit list
+This resource is connected with customers savings.
 
 #### /card
 This resource reflects a customers payment card. Every card is connected to customer account. Also debit card is supported in this area.
 
 #### /card_transaction
-This resource contains all information about card finanse operations eg. obtaining cash from an ATM, internet payments or shopping transactions
+This resource contains all information about card finanse operations eg. obtaining cash from an ATM, internet payments or shopping transactions.
 
 ### Tools
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bukalaACP/hackathon-2018/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with API? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+To integrate with our RESTful API You can use Your favourite tool. We suggest: 
+[PostMan](https://www.getpostman.com)
+[SoapUI](https://www.soapui.org) or symply 
+[Curl](https://curl.haxx.se)
