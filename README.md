@@ -21,7 +21,7 @@ This resource describe personal information about bank's customers. User is in r
 This resource describe a basic banking product. It's finance registry closely related to bank customer. Main property of this resource is a finance balance.
 
 #### /payments
-can create domestic transfer transaction
+This resource is created after the bank's customer decided to make some finance movement eg. money transfer to internal or external account. Every payment has their amount, currency and status which decide about payment's state. Not every payments has a finance effect cause rejection, limitations or user cancellation.
 
 #### /transaction
 information about transactions on user account
