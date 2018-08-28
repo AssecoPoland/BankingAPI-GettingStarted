@@ -12,13 +12,29 @@ The purpose of this documentation is to give an overview of all the API which ar
 
 To start working with our API You need information about:
 - jwtToken - authorization token which is provided by our organization
+```
+Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJhdWQiOlsicmViLWN1c3RvbWVyLXNlcnZpY2UiXSwidXNlcl9uYW1lIjoiTUIxQk1PNlIiLCJpZGVudGl0eSI6eyJvcmdfdW5pdCI6Im91PTk0NixvPVNHQi1CQU5LLGRjPUFDUCxkYz11ZmUsZGM9Y29tIiwicGVyc29uX2lkIjoiMzI4MDM4Iiwicm9sZSI6IkNVU1RPTUVSIiwiYWNjZXNzX3Byb2ZpbGVfaWQiOiIyMDA3In0sInNjb3BlIjpbIndyaXRlIiwicmVhZCJdLCJpc3MiOiJpc3N1ZXIiLCJqdGkiOiJlYmY0ZGZmYS00ZWU2LTQ4NGUtODdiMy1hYzc5MDk3ZWRmZjUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXX0.W3ZMfIHLu401I3CKG0lv0Om3xPoZqeVn2DdJQEzPtyQ
+```
 - apiAddress - address of Your sanbox
+```
+https://cbp-api.asseco.pl/banking-service
+```
+
 - customerId - internal customer's identificator inside of bank
+```
+328038
+```
+
+- accessProfileId - internal customer's profile identificator inside of bank
+```
+2007
+```
 
 Below is a simple curl GET request to our API:
+Before use please fill required parameters, jwtToken, apiAddress, customerId.
 
 ``` 
-curl -k -X GET --header "Accept: application/json" --header "Authorization: Bearer jwtToken" "https://apiAddress/retail-banking-api/api/user/get/user_personal_details.json?customerId=customerId"
+curl -k -X GET --header "Accept: application/json" --header "Authorization: jwtToken" "https://apiAddress/api/user/get/user_personal_details.json?customerId=customerId"
 ```
 
 ### Security issue
