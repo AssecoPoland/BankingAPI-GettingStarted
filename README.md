@@ -14,11 +14,17 @@ The purpose of this documentation is to give an overview of all the API which ar
 
 ### Bussiness domain
 
+#### /user
+This resource describe personal information about bank's customers. User is in relation with below finance resources.
+
 #### /account
 This resource describe a basic banking product. It's finance registry closely related to bank customer. Main property of this resource is a finance balance.
 
-#### /card
-...
+#### /payments
+can create domestic transfer transaction
+
+#### /transaction
+information about transactions on user account
 
 #### /credit
 user credit list
@@ -26,17 +32,11 @@ user credit list
 #### /deposit
 user deposit list
 
+#### /card
+This resource reflects a customers payment card. Every card is connected to customer account. Also debit card is supported in this area.
+
 #### /card_transaction
-list with card transactions made by user
-
-#### /transaction
-information about transactions on user account
-
-#### /payments
-can create domestic transfer transaction
-
-#### /user
-details about user which is stored in authentication token
+This resource contains all information about card finanse operations eg. obtaining cash from an ATM, internet payments or shopping transactions
 
 ### Tools
 
